@@ -1,0 +1,50 @@
+﻿<Window x:Class="FoundryCenter.DlgProjectManagement"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:FoundryCenter"   
+	  Title="{Binding Path=DlgProjectTitle, Source={StaticResource LVMText}}"
+    Height="230" MinHeight="230" MinWidth="450" Width="500"
+    Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+    WindowStartupLocation="CenterOwner"   
+    FontSize="12" >
+  
+
+    <Grid  HorizontalAlignment="Stretch" Margin="10,0,10,10" >
+      <Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition />
+        <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+			<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource UsualText}" Text="{Binding Path=DlgProject3DGeometry, Source={StaticResource LVMText}}" />
+			<TextBox Grid.Row="1" Grid.Column="0" Margin="0,2" Padding="0,0,10,0" Text="{Binding Path=Default3DGeometryPath, Mode=TwoWay}" />
+			<Button Grid.Row="1" Grid.Column="1" Width="Auto" Padding="4,0" Margin="5,2,0,2" Content="..." Click="OnBrowse3DGeometry" />
+
+		  <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource UsualText}" Text = "{Binding Path=DlgProjectLocation, Source={StaticResource LVMText}}"  />
+      <TextBox Grid.Row="3" Grid.Column="0" Margin="0,2" Padding="0,0,10,0"  Text = "{Binding Path=DefaultProjectsPath, Mode=TwoWay}"  /> 
+      <Button Grid.Row="3" Grid.Column="1" Width="Auto" Padding="4,0" Margin="5,2,0,2" Content="..." Click="OnBrowseLocation" />
+      
+      <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource UsualText}" Text = "{Binding Path=DlgProjectCurrent, Source={StaticResource LVMText}}"/>
+      <TextBox Grid.Row="5" Grid.Column="0" Margin="0,2" Padding="0,0,10,0"  Text = "{Binding Path=CurrentProject}" />
+      <Button Grid.Row="5" Grid.Column="1" Width="Auto" Padding="4,0" Margin="5,2,0,2" Content="..." Click="OnBrowseProject" />
+      
+      <StackPanel Grid.Row="6" Grid.Column="0"  Grid.ColumnSpan="2" Orientation="Horizontal"  HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,15,0,5" >
+        <!--<Button Content="{Binding Path=DlgProjectNew, Source={StaticResource LVMText}}" Margin="0,0,15,0" Padding="10,0" Click="OnNewProject" IsEnabled="false"/>-->
+        <!--<Button Content="{Binding Path=DlgProjectClear, Source={StaticResource LVMText}}" Padding="10,0" Click="OnClearProject" IsEnabled="false" />-->
+      </StackPanel> 
+      
+      <StackPanel Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,15,0,5">
+        <Button Content="{Binding Path=Save, Source={StaticResource LVMText}}"  Padding="10,0" Margin="0,0,15,0" IsDefault="True" Click="OnOK" />
+        <Button Content="{Binding Path=Cancel, Source={StaticResource LVMText}}" Padding="10,0" IsCancel="True" />
+      </StackPanel>
+     </Grid>
+  
+</Window>
