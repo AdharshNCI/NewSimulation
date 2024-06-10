@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FoundryCenter" GeneratedClassName="Settings">
-  <Profiles />
-  <Settings>
-    <Setting Name="AppWindowPlacement" Type="System.Windows.Rect" Scope="User">
-      <Value Profile="(Default)">0,0,900,700</Value>
-    </Setting>
-  </Settings>
-</SettingsFile>
